@@ -1,0 +1,102 @@
+ext {
+    //android开发版本配置
+    android = [
+            compileSdkVersion: 28,
+            buildToolsVersion: "28.0.3",
+            applicationId    : "com.threathunter.privacysecurity",
+            minSdkVersion    : 16,
+            targetSdkVersion : 28,
+            versionCode      : 50,
+            versionName      : "1.2.1",
+            junitRunner      : "androidx.test.runner.AndroidJUnitRunner"
+    ]
+
+    //virtualapp配置
+    va = [
+            'PACKAGE_NAME_32BIT': 'com.threathunter.privacysecurity',
+            'PACKAGE_NAME_ARM64': 'com.threathunter.privacysecurity.addon.arm64',
+            'PERMISSION_PREFIX' : 'PACKAGE_NAME_32BIT',
+            'AUTHORITY64_PREFIX': 'PACKAGE_NAME_ARM64',
+            'VERSION'           : '3.3.0',
+            'VERSION_CODE'      : '180080914'
+    ]
+    //version配置
+    versions = [
+            "support-version": "28.0.0",
+            "junit-version"  : "4.12",
+    ]
+    //support配置
+    support = [
+            "multidex"                : 'androidx.multidex:multidex:2.0.0',
+            "percent"                 : "androidx.percentlayout:percentlayout:1.0.0",
+            'support-v4'              : "androidx.legacy:legacy-support-v4:1.0.0-beta01",
+            'appcompat-v7'            : "androidx.appcompat:appcompat:1.1.0-alpha04",
+            'recyclerview-v7'         : "androidx.recyclerview:recyclerview:1.0.0-beta01",
+            'support-v13'             : "androidx.legacy:legacy-support-v13:1.0.0",
+            'support-fragment'        : "androidx.fragment:fragment:1.0.0",
+            'design'                  : "com.google.android.material:material:1.1.0-alpha05",
+            'animated-vector-drawable': "androidx.vectordrawable:vectordrawable:1.0.1",
+            'junit'                   : "junit:junit:4.12",
+            'constraint-layout'       : 'androidx.constraintlayout:constraintlayout:1.1.3',
+            'espresso'                : 'androidx.test.espresso:espresso-core:3.1.0-alpha4',
+            'test-runner'             : 'androidx.test:runner:1.1.0-alpha4',
+            'support-annotations'     : "androidx.annotation:annotation:1.0.2",
+    ]
+    //依赖第三方配置
+    dependencies = [
+            //rxjava
+            "rxjava"                               : "io.reactivex.rxjava2:rxjava:2.2.3",
+            "rxandroid"                            : "io.reactivex.rxjava2:rxandroid:2.1.0",
+            //rx系列与View生命周期同步
+            "rxlifecycle"                          : "com.trello.rxlifecycle2:rxlifecycle:2.2.2",
+            "rxlifecycle-components"               : "com.trello.rxlifecycle2:rxlifecycle-components:2.2.2",
+            //rxbinding
+            "rxbinding"                            : "com.jakewharton.rxbinding2:rxbinding:2.1.1",
+            //rx 6.0权限请求（已废弃）
+//            "rxpermissions"                        : "com.github.tbruyelle:rxpermissions:0.10.2",
+            //network
+            "okhttp"                               : "com.squareup.okhttp3:okhttp:3.10.0",
+            "logging-interceptor"                  : "com.squareup.okhttp3:logging-interceptor:3.10.0",
+            "retrofit"                             : "com.squareup.retrofit2:retrofit:2.4.0",
+            "converter-gson"                       : "com.squareup.retrofit2:converter-gson:2.4.0",
+            "adapter-rxjava"                       : "com.squareup.retrofit2:adapter-rxjava2:2.4.0",
+            //glide图片加载
+            "glide"                                : "com.github.bumptech.glide:glide:4.9.0",
+            "glide-compiler"                       : "com.github.bumptech.glide:compiler:4.9.0",
+            //json解析
+            "gson"                                 : "com.google.code.gson:gson:2.8.5",
+            //material-dialogs
+            "material-dialogs-core"                : "com.afollestad.material-dialogs:core:0.9.6.0",
+            "material-dialogs-commons"             : "com.afollestad.material-dialogs:commons:0.9.6.0",
+            //recyclerview的databinding套装
+            "bindingcollectionadapter"             : "me.tatarka.bindingcollectionadapter2:bindingcollectionadapter:2.2.0",
+            "bindingcollectionadapter-recyclerview": "me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-recyclerview:2.2.0",
+            //Google AAC
+            "lifecycle-extensions"                 : 'androidx.lifecycle:lifecycle-extensions:2.0.0-beta01',
+            "lifecycle-compiler"                   : 'androidx.lifecycle:lifecycle-compiler:2.0.0-beta01',
+            //logger
+            "logger"                               : "com.orhanobut:logger:2.2.0",
+            "eventbus"                             : "org.greenrobot:eventbus:3.1.1",
+            "stetho"                               : "com.facebook.stetho:stetho:1.5.1",
+            "stetho-network"                       : "com.facebook.stetho:stetho-okhttp3:1.5.1",
+            "greendao"                             : "org.greenrobot:greendao:3.2.2",
+            "utilcode"                             : "com.blankj:utilcodex:1.24.2",
+            "brvah"                                : "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.46",
+            "titlebar"                             : "com.wuhenzhizao:titlebar:1.1.4",
+            "vercodeedittext"                      : "com.justkiddingbaby:vercodeedittext:1.1.0",
+            "agentweb"                             : "com.just.agentweb:agentweb:4.0.2",
+            "promise"                              : "org.jdeferred:jdeferred-android-aar:1.2.4",
+            "nicedialog"                           : "com.github.SheHuan:NiceDialog:1.1.9",
+            "FlycoTabLayout"                       : "com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar",
+            "wechat"                               : 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+',
+            "lottie"                               : 'com.airbnb.android:lottie:3.0.0',
+            "hooklib"                              : 'com.swift.sandhook:hooklib:3.6.0',
+            "xposedcompat"                         : 'com.swift.sandhook:xposedcompat:3.6.0',
+            "leakcanary"                           : 'com.squareup.leakcanary:leakcanary-android:2.0-alpha-1',
+            "blockcanary"                          : 'com.github.markzhai:blockcanary-android:1.5.0',
+            "NewbieGuide"                          : 'com.github.huburt-Hu:NewbieGuide:v2.4.2',
+            "ProviGen"                             : "com.github.provigen:ProviGen-lib:2.0.+",
+    ]
+}
+
+
